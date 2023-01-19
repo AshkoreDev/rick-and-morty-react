@@ -1,0 +1,15 @@
+.card {
+	height: 350px;
+	border-radius: 10px;
+	border: 2px solid #0b5ed7;
+}
+
+.img {
+	border-radius: 10px 0;
+}
+
+.badge {
+	top: 10px;
+	right: 20px;
+	font-size: 17px;
+}
