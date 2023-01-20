@@ -3,7 +3,7 @@ import Status from './Category/Status.jsx';
 import Species from './Category/Species.jsx';
 import Gender from './Category/Gender.jsx';
 
-const Filter = () => {
+const Filter = ({setStatus, setGender, setSpecies, setPageNumber}) => {
 
 	return (
 
@@ -12,9 +12,9 @@ const Filter = () => {
 			<h3 style={{cursor: "pointer"}} className="text-center text-primary text-decoration-underline fs-5 mb-4">Clear Filters</h3>
 
 			<div className="accordion" id="accordionExample">
-				<Status />
-				<Species />
-				<Gender />
+				<Status setPageNumber={setPageNumber} setStatus={setStatus}/>
+				<Species setPageNumber={setPageNumber} setSpecies={setSpecies}/>
+				<Gender setPageNumber={setPageNumber} setGender={setGender}/>
 			</div>
 		</section>
 		

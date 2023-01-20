@@ -1,6 +1,7 @@
 import React from 'react';
+import './Filter.css';
 
-const FilterBtn = ({name, index, item}) => {
+const FilterBtn = ({name, index, item, task, setPageNumber}) => {
 
 	return (
 
@@ -11,6 +12,10 @@ const FilterBtn = ({name, index, item}) => {
 			  	type="radio" 
 			  	name={name} 
 			  	id={`${name}-${index}`}
+			  	onClick={() => {
+			  		task(item);
+			  		setPageNumber(1);
+			  	}}
 			  />
 			  <label 
 			  	className="btn btn-outline-primary" 

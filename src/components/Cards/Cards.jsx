@@ -12,7 +12,7 @@ const Cards = ({results}) => {
 
 			return (
 			    
-				<article key={character.id} className="col-4 position-relative mb-4 card">
+				<div key={character.id} className="col-4 position-relative mb-4 cards">
 	      	<img src={character.image} alt={character.name} className="image img-fluid"/>
 
 	      	<div className="content p-2">
@@ -29,7 +29,7 @@ const Cards = ({results}) => {
 							return (<span className="badge bg-warning position-absolute">{character.status}</span>);
 						}
 			    })()}
-				</article>
+				</div>
   		);
 	});
 		

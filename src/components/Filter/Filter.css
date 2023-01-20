@@ -1,0 +1,9 @@
+/*FilterBtn*/
+input[type="radio"] {
+	display: none;
+}
+
+.form-check-input:checked + label {
+	color: white;
+	background-color: #0b5ed7;
+}

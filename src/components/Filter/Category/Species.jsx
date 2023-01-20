@@ -1,7 +1,7 @@
 import React from 'react';
 import FilterBtn from './../FilterBtn';
 
-const Species = () => {
+const Species = ({setPageNumber, setSpecies}) => {
 
 	const genders = ['Human','Alien','Humanoid','Poopybutthole','Mythological','Unknown','Animal','Disease','Robot','Cronenberg','Planet'];
 
@@ -23,8 +23,17 @@ const Species = () => {
 	    	className="accordion-collapse collapse" 
 	    	aria-labelledby="headingTwo" 
 	    	data-bs-parent="#accordionExample">
-	      <div className="accordion-body">
-	        {	genders.map((item, index) => (<FilterBtn key={index} name="species" index={index} item={item}/>)) }	
+	      <div className="accordion-body d-flex flex-wrap gap-3">
+	        {	genders.map((item, index) => (
+	        		<FilterBtn 
+	        			key={index} 
+		        		name="species" 
+		        		index={index} 
+		        		item={item}
+		        		task={setSpecies}
+	      				setPageNumber={setPageNumber}
+	      			/>
+	      	)) }	
 	      </div>
 	    </div>
   </div>
