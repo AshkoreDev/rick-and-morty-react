@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cards from './components/Cards/Cards.jsx';
+import Search from './components/Search/Search.jsx';
 import Filter from './components/Filter/Filter.jsx';
 import Pagination from './components/Pagination/Pagination.jsx';
 
@@ -24,6 +25,8 @@ function App() {
     <>
       <h1 className="text-center my-4">Rick & Morty App</h1>
 
+      <Search />
+      
       <div className="container">
         <div className="row">
           <div className="col-3">
