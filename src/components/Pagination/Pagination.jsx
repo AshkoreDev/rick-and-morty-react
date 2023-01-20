@@ -18,6 +18,7 @@ const Pagination = ({info, pageNumber, setPageNumber}) => {
 	  	onPageChange={(data) => setPageNumber(data.selected + 1)}
 	  	forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
 	  />
+	  
 	)
 };
 
