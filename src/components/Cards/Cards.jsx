@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Cards.css';
 
 const Cards = ({results}) => {
-console.log(results)
 	let display;
 
 	if (results) {
