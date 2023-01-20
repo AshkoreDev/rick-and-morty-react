@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Filter from './components/Filter/Filter.jsx';
 import Cards from './components/Cards/Cards.jsx';
+import Filter from './components/Filter/Filter.jsx';
+import Pagination from './components/Pagination/Pagination.jsx';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
   return (
     <>
       <h1 className="text-center my-4">Rick & Morty App</h1>
+
       <div className="container">
         <div className="row">
           <div className="col-3">
@@ -34,6 +36,8 @@ function App() {
           </div>
         </div>
       </div>
+
+      <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber}/>
     </>
   )
 }

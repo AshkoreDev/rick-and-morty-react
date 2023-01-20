@@ -11,7 +11,7 @@ console.log(results)
     display = results.map((character) => {
 			return (
 				<article key={character.id} className="card col-4 position-relative mb-4">
-	      	<img src={character.image} alt={character.name} className="img img-fluid"/>
+	      	<img src={character.image} alt={character.name} className="image img-fluid"/>
 
 	      	<div className="content p-2">
 	      		<h2 className="fs-4 fw-bold mb-2">{character.name}</h2>
