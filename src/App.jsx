@@ -8,31 +8,16 @@ function App() {
   const [pageNumber, setPageNumber] = useState(1);
   const [fetchedData, setFetchedData] = useState([]);
   const { info, results } = fetchedData;
-  const API = `https://rickandmortyapi.com/api/character`;
-
+  const API = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
 
   useEffect(() =>  {
-
     (async function() {
-    
-      try {
-
-        const res = await fetch(API);
-        const data = await res.json();
-        setFetchedData(data);
-
-        console.log(data);
-
-      } catch(error) {
-
-        console.log(error);
-      }
-    })
+      const res = await fetch(API);
+      const data = await res.json();
+      setFetchedData(data);
+    })();
 
   }, [API]);
-
-  console.log(info)
-  console.log(results)
 
   return (
     <>
@@ -42,11 +27,11 @@ function App() {
           <div className="col-3">
             <Filter />
           </div>
-          {/*<div className="col-8">
+          <div className="col-8">
             <div className="row">
-              <Cards results={results}/>
+              <Cards results={results} />
             </div>
-          </div>*/}
+          </div>
         </div>
       </div>
     </>
