@@ -8,8 +8,29 @@ import Navbar from './components/Navbar/Navbar.jsx';
 import Pagination from './components/Pagination/Pagination.jsx';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Episodes from './Pages/Episodes.jsx';
+import Location from './Pages/Location.jsx';
 
 function App() {
+
+  return (
+
+    <Router>
+      <div className="App">
+        <Navbar />
+      </div>
+
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/episodes" element={<Episodes />}/>
+        <Route path="/location" element={<Location />}/>
+      </Routes>
+    </Router>
+
+  );
+}
+
+const Home = () => {
 
   const [pageNumber, setPageNumber] = useState(1);
   const [fetchedData, setFetchedData] = useState([]);
@@ -33,7 +54,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      
       
       <Search setSearch={setSearch} setPageNumber={setPageNumber}/>
 
