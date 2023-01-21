@@ -16,6 +16,7 @@ const Episodes = () => {
     (async function() {
       const res = await fetch(API);
       const data = await res.json();
+      
       setInfo(data);
 
       const charactersInfo = await Promise.all(
