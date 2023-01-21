@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -6,7 +7,7 @@ const Navbar = () => {
 
 		<nav className="navbar navbar-expand-lg bg-body-tertiary mb-5">
 		  <div className="container">
-		    <h1 className="navbar-brand text-primary fw-bold fs-4">Rick & Morty App</h1>
+		    <Link className="navbar-brand text-primary fw-bold fs-3" to="/">Rick & Morty App</Link>
 		    <button 
 		    	className="navbar-toggler" 
 		    	type="button" 
@@ -18,17 +19,16 @@ const Navbar = () => {
 		      <span className="navbar-toggler-icon"></span>
 		    </button>
 		    <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-		      <div className="navbar-nav">
-		        <a className="nav-link" aria-current="page" href="#">Home</a>
-		        <a className="nav-link" href="#">Features</a>
-		        <a className="nav-link" href="#">Pricing</a>
-		        <a className="nav-link disabled">Disabled</a>
+		      <div className="navbar-nav gap-4 fs-5">
+		        <NavLink className="nav-link" to="/">Characters</NavLink>
+		        <NavLink className="nav-link" to="/episodes">Episodes</NavLink>
+		        <NavLink className="nav-link" to="/location">Location</NavLink>
 		      </div>
 		    </div>
 		  </div>
 		</nav>
 
-	)
+	);
 };
 
 export default Navbar;
