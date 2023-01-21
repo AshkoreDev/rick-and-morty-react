@@ -4,7 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Cards from './components/Cards/Cards.jsx';
 import Search from './components/Search/Search.jsx';
 import Filter from './components/Filter/Filter.jsx';
+import Navbar from './components/Navbar/Navbar.jsx';
 import Pagination from './components/Pagination/Pagination.jsx';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 
@@ -30,8 +33,8 @@ function App() {
 
   return (
     <>
-      <h1 className="text-center my-4">Rick & Morty App</h1>
-
+      <Navbar />
+      
       <Search setSearch={setSearch} setPageNumber={setPageNumber}/>
 
       <div className="container">
