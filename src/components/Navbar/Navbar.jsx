@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
 
@@ -16,11 +17,14 @@ const Navbar = () => {
 		    	aria-controls="navbarNavAltMarkup" 
 		    	aria-expanded="false" 
 		    	aria-label="Toggle navigation">
-		      <span className="navbar-toggler-icon"></span>
+
+		    	<i className="fa-solid fa-bars open fw-bold text-dark"></i>
+		    	<i className="fa-solid fa-xmark close fw-bold text-dark"></i>
+		      
 		    </button>
 		    <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 		      <div className="navbar-nav gap-4 fs-5">
-		        <NavLink className="nav-link" to="/">Characters</NavLink>
+		        <NavLink className="nav-link" activeClassName="active" to="/">Characters</NavLink>
 		        <NavLink className="nav-link" to="/episodes">Episodes</NavLink>
 		        <NavLink className="nav-link" to="/location">Location</NavLink>
 		      </div>
