@@ -12,7 +12,7 @@ const Cards = ({results}) => {
 
 			return (
 			    
-				<div key={character.id} className="col-4 position-relative mb-4 cards">
+				<article key={character.id} className="col-4 position-relative mb-4 cards">
 	      	<img src={character.image} alt={character.name} className="image img-fluid"/>
 
 	      	<div className="content p-2">
@@ -29,13 +29,13 @@ const Cards = ({results}) => {
 							return (<span className="badge bg-warning position-absolute">{character.status}</span>);
 						}
 			    })()}
-				</div>
+				</article>
   		);
 	});
 		
 	} else {
 
-		display = <h2>No Characters Found</h2>;
+		display = <h2 className="text-center">No Characters Found</h2>;
 	}
 	
 	return <section>{display}</section>
