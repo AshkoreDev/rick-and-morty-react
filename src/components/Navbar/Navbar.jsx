@@ -24,7 +24,7 @@ const Navbar = () => {
 		    </button>
 		    <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 		      <div className="navbar-nav gap-4 fs-5">
-		        <NavLink className="nav-link" activeClassName="active" to="/">Characters</NavLink>
+		        <NavLink className="nav-link" activeclassname="active" to="/">Characters</NavLink>
 		        <NavLink className="nav-link" to="/episodes">Episodes</NavLink>
 		        <NavLink className="nav-link" to="/location">Location</NavLink>
 		      </div>

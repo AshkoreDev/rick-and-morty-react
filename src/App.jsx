@@ -54,8 +54,6 @@ const Home = () => {
 
   return (
     <>
-      
-      
       <Search setSearch={setSearch} setPageNumber={setPageNumber}/>
 
       <div className="container">
