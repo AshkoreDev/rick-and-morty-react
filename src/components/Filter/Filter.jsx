@@ -15,7 +15,7 @@ const Filter = ({setStatus, setGender, setSpecies, setPageNumber}) => {
 
 	return (
 
-		<section className="col-3">
+		<section className="col-lg-3 col-12 mb-5">
 			<h2 className="text-center fw-bold fs-4 mb-2">Filter</h2>
 			<h3 style={{cursor: "pointer"}} className="text-center text-primary text-decoration-underline fs-5 mb-4" onClick={clear}>Clear Filters</h3>
 

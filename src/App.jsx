@@ -71,8 +71,8 @@ const Home = () => {
             setSpecies={setSpecies} 
             setPageNumber={setPageNumber} 
           />
-          <div className="col-8">
-            <div className="row py-2">
+          <div className="col-lg-8 col-12">
+            <div className="row">
               <Cards results={results} page="/"/>
             </div>
           </div>

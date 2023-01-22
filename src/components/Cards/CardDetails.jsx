@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-const CardDetails = ({page}) => {
+const CardDetails = () => {
 
 	const { id } = useParams();
 	const [fetchedData, setFetchedData] = useState([]);
@@ -48,11 +48,11 @@ const CardDetails = ({page}) => {
 	  				<span className="">{type === "" ? "Unknown" : type}</span>
 	  			</div>
 	  			<div className="fs-5">
-	  				<span className="fw-bold">location: </span>
+	  				<span className="fw-bold">Location: </span>
 	  				<span className="">{location?.name}</span>
 	  			</div>
 	  			<div className="fs-5">
-	  				<span className="fw-bold">origin: </span>
+	  				<span className="fw-bold">Origin: </span>
 	  				<span className="">{origin?.name}</span>
 	  			</div>
 	  		</div>

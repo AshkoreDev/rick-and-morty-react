@@ -40,7 +40,7 @@ const Location = () => {
 			</div>
 
 			<div className="row">
-				<div className="col-3">
+				<div className="col-lg-3 col-12 mb-5">
 					<h2 className="text-center fw-bold fs-4 mb-4">Pick Location</h2>
 					<InputGroup total={126} name="Location" setId={setId}/>
 				</div>

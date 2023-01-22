@@ -39,7 +39,7 @@ const Episodes = () => {
 			</div>
 
 			<div className="row">
-				<div className="col-3">
+				<div className="col-lg-3 col-12 mb-5">
 					<h2 className="text-center fw-bold fs-4 mb-4">Pick Episodes</h2>
 					<InputGroup total={51} name="Episode" setId={setId}/>
 				</div>
