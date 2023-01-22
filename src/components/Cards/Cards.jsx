@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Cards.css';
 
-const Cards = ({results}) => {
+const Cards = ({results, page}) => {
 
 	let display;
 
@@ -10,28 +11,30 @@ const Cards = ({results}) => {
 
     display = results.map((character) => {
 
+    	const { id, name, image, location, status } = character;
+
 			return (
 			    
-				<article key={character.id} className="col-4 position-relative mb-4 cards">
-	      	<img src={character.image} alt={character.name} className="image img-fluid"/>
+				<Link key={id} className="col-4 position-relative mb-4 text-dark cards" to={`${page}${id}`}>
+	      	<img src={image} alt={name} className="image img-fluid"/>
 
 	      	<div className="content p-2">
-	      		<h2 className="fs-4 fw-bold mb-2">{character.name}</h2>
+	      		<h2 className="fs-4 fw-bold mb-2">{name}</h2>
 	      		<h5 className="fs-6">Last location</h5>
-	      		<h3 className="fs-5">{character.location.name}</h3>
+	      		<h3 className="fs-5">{location.name}</h3>
 	      	</div>
 	      	{(() => {
-						if (character.status === 'Alive') {
-							return (<span className="badge bg-success position-absolute">{character.status}</span>);
-						} else if(character.status === 'Dead') {
-							return (<span className="badge bg-danger position-absolute">{character.status}</span>);
+						if (status === 'Alive') {
+							return (<span className="badge bg-success position-absolute">{status}</span>);
+						} else if(status === 'Dead') {
+							return (<span className="badge bg-danger position-absolute">{status}</span>);
 						} else {
-							return (<span className="badge bg-warning position-absolute">{character.status}</span>);
+							return (<span className="badge bg-warning position-absolute">{status}</span>);
 						}
 			    })()}
-				</article>
+				</Link>
   		);
-	});
+		});
 		
 	} else {
 

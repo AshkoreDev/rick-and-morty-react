@@ -5,6 +5,7 @@ import Cards from './components/Cards/Cards.jsx';
 import Search from './components/Search/Search.jsx';
 import Filter from './components/Filter/Filter.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
+import CardDetails from './components/Cards/CardDetails.jsx';
 import Pagination from './components/Pagination/Pagination.jsx';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -22,13 +23,18 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />}/>
+        <Route path="/:id" element={<CardDetails />}/>
+
         <Route path="/episodes" element={<Episodes />}/>
+        <Route path="/episodes/:id" element={<CardDetails />}/>
+
         <Route path="/location" element={<Location />}/>
+        <Route path="/location/:id" element={<CardDetails />}/>
       </Routes>
     </Router>
 
   );
-}
+};
 
 const Home = () => {
 
@@ -54,6 +60,7 @@ const Home = () => {
 
   return (
     <>
+      <h2 className="text-center mb-4">Characters</h2>
       <Search setSearch={setSearch} setPageNumber={setPageNumber}/>
 
       <div className="container">
@@ -66,7 +73,7 @@ const Home = () => {
           />
           <div className="col-8">
             <div className="row py-2">
-              <Cards results={results} />
+              <Cards results={results} page="/"/>
             </div>
           </div>
         </div>
@@ -78,7 +85,7 @@ const Home = () => {
         setPageNumber={setPageNumber}
       />
     </>
-  )
+  );
 };
 
 export default App;

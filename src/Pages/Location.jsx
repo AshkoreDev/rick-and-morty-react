@@ -46,7 +46,7 @@ const Location = () => {
 				</div>
 				<div className="col-8">
 					<div className="row py-2">
-						<Cards results={results} />
+						<Cards results={results} page="/location/"/>
 					</div>
 				</div>
 			</div>
