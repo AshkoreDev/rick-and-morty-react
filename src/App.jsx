@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Cards from './components/Cards/Cards.jsx';
 import Search from './components/Search/Search.jsx';
 import Filter from './components/Filter/Filter.jsx';
@@ -51,6 +52,7 @@ const Home = () => {
   useEffect(() =>  {
     
     (async function() {
+      
       const res = await fetch(API);
       const data = await res.json();
       setFetchedData(data);
@@ -60,7 +62,7 @@ const Home = () => {
 
   return (
     <>
-      <h2 className="text-center mb-4">Characters</h2>
+      <h3 className="text-center mb-4">Characters</h3>
       <Search setSearch={setSearch} setPageNumber={setPageNumber}/>
 
       <div className="container">

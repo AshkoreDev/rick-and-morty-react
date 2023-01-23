@@ -14,12 +14,14 @@ const Episodes = () => {
 	useEffect(() =>  {
     
     (async function() {
+
       const res = await fetch(API);
       const data = await res.json();
       
       setInfo(data);
-
+      
       const charactersInfo = await Promise.all(
+
 				data.characters.map((links) => {
 					return fetch(links).then((resC) => resC.json());
 				})                                               
@@ -30,21 +32,23 @@ const Episodes = () => {
 
   }, [API]);
 
-	return(
+	return (
 
 		<div className="container">
-			<div className="row mb-4">
-				<h2 className="text-center mb-4">Episode: {name === "" ? "Unknown" : name}</h2>
+			<div className="row mb-5">
+				<h3 className="text-center mb-3">Episode: {''} 
+					<span className="text-primary">{name === "" ? "Unknown" : name}</span>
+				</h3>
 				<h3 className="text-center">Aire Date {air_date === "" ? "Unknown" : `on ${air_date}`}</h3>
 			</div>
 
 			<div className="row">
 				<div className="col-lg-3 col-12 mb-5">
-					<h2 className="text-center fw-bold fs-4 mb-4">Pick Episodes</h2>
+					<h2 className="text-center fs-5 mb-4">Pick Episodes</h2>
 					<InputGroup total={51} name="Episode" setId={setId}/>
 				</div>
-				<div className="col-8">
-					<div className="row py-2">
+				<div className="col-lg-8 col-12">
+					<div className="row">
 						<Cards results={results} page="/episodes/"/>
 					</div>
 				</div>

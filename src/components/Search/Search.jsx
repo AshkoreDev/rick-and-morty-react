@@ -1,7 +1,7 @@
 import React from 'react';
 import './Search.css';
 
-const Search = ({setSearch, setPageNumber}) => {
+const Search = ({ setSearch, setPageNumber }) => {
 
 	const searched = (e) => {
 
@@ -11,12 +11,12 @@ const Search = ({setSearch, setPageNumber}) => {
 
 	return (
 
-	  <form className="d-flex justify-content-center gap-4 mb-5 ">
+	  <form className="d-flex justify-content-center gap-4 mb-5">
 			<input type="text" placeholder="Search for Characters" className="input" onChange={searched}/>
 			{/*<button className="btn btn-large btn-primary fs-5">Search</button>*/}
 		</form>
 
-	)
+	);
 };
 
 export default Search;

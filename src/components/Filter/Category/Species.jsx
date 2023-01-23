@@ -1,7 +1,7 @@
 import React from 'react';
 import FilterBtn from './../FilterBtn';
 
-const Species = ({setPageNumber, setSpecies}) => {
+const Species = ({ setPageNumber, setSpecies }) => {
 
 	const genders = ['Human','Alien','Humanoid','Poopybutthole','Mythological','Unknown','Animal','Disease','Robot','Cronenberg','Planet'];
 
@@ -38,7 +38,7 @@ const Species = ({setPageNumber, setSpecies}) => {
 	    </div>
   </div>
 
-	)
+	);
 };
 
 export default Species;

@@ -1,7 +1,7 @@
 import React from 'react';
 import FilterBtn from './../FilterBtn';
 
-const Status = ({setPageNumber, setStatus}) => {
+const Status = ({ setPageNumber, setStatus }) => {
 
 	const status = ['Alive', 'Dead', 'Unknown'];
 
@@ -38,7 +38,7 @@ const Status = ({setPageNumber, setStatus}) => {
 	    </div>
 	  </div>
 
-	)
+	);
 };
 
 export default Status;

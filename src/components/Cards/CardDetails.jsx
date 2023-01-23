@@ -12,9 +12,11 @@ const CardDetails = () => {
 	useEffect(() =>  {
     
     (async function() {
+
       const res = await fetch(API);
       const data = await res.json();
       setFetchedData(data);
+      
     })();
 
   }, [API]);
@@ -26,34 +28,34 @@ const CardDetails = () => {
 	  		<h2 className="text-center fs-1">{name}</h2>
 	  		<img src={image} alt={`${name} photo`} className="img-fluid"/>
 	  		{(() => {
-						if (status === 'Alive') {
-							return (<span className="bg-success text-white text-center fw-bold fs-5">{status}</span>);
-						} else if(status === 'Dead') {
-							return (<span className="bg-danger text-white text-center fw-bold fs-5">{status}</span>);
-						} else {
-							return (<span className="bg-warning text-white text-center fw-bold fs-5">{status}</span>);
-						}
-			    })()}
-	  		<div className="content">
+					if (status === 'Alive') {
+						return (<span className="bg-success text-white text-center fw-bold fs-5">{status}</span>);
+					} else if(status === 'Dead') {
+						return (<span className="bg-danger text-white text-center fw-bold fs-5">{status}</span>);
+					} else {
+						return (<span className="bg-warning text-white text-center fw-bold fs-5">{status}</span>);
+					}
+		    })()}
+	  		<div>
 	  			<div className="fs-5">
 	  				<span className="fw-bold">Gender: </span>
-	  				<span className="">{gender}</span>
+	  				<span>{gender}</span>
 	  			</div>
 	  			<div className="fs-5">
 	  				<span className="fw-bold">Species: </span>
-	  				<span className="">{species}</span>
+	  				<span>{species}</span>
 	  			</div>
 	  			<div className="fs-5">
 	  				<span className="fw-bold">Type: </span>
-	  				<span className="">{type === "" ? "Unknown" : type}</span>
+	  				<span>{type === "" ? "Unknown" : type}</span>
 	  			</div>
 	  			<div className="fs-5">
 	  				<span className="fw-bold">Location: </span>
-	  				<span className="">{location?.name}</span>
+	  				<span>{location?.name}</span>
 	  			</div>
 	  			<div className="fs-5">
 	  				<span className="fw-bold">Origin: </span>
-	  				<span className="">{origin?.name}</span>
+	  				<span>{origin?.name}</span>
 	  			</div>
 	  		</div>
 	  	</article>

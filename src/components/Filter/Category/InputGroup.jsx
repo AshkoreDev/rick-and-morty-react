@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-const InputGroup = ({total, name, setId}) => {
+const InputGroup = ({ total, name, setId }) => {
 
 	return (
 

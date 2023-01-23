@@ -1,7 +1,7 @@
 import React from 'react';
 import FilterBtn from './../FilterBtn';
 
-const Gender = ({setPageNumber, setGender}) => {
+const Gender = ({ setPageNumber, setGender }) => {
 
 	const genders = ['Female', 'Male', 'Genderless', 'Unknown'];
 
@@ -38,7 +38,7 @@ const Gender = ({setPageNumber, setGender}) => {
 	    </div>
   	</div>
   	
-	)
+	);
 };
 
 export default Gender;

@@ -30,29 +30,31 @@ const Location = () => {
 
   }, [API]);
 
-	return(
+	return (
 
 		<div className="container">
-			<div className="row mb-4">
-				<h2 className="text-center mb-4">Location: {name === "" ? "Unknown" : name}</h2>
+			<div className="row mb-5">
+				<h3 className="text-center mb-2">Location: {''}
+					<span className="text-primary">{name === "" ? "Unknown" : name}</span>
+				</h3>
 				<h4 className="text-center">Dimension: {dimension === "" ? "Unknown" : dimension}</h4>
-				<h5 className="text-center">Type: {type === "" ? "Unknown" : type}</h5>
+				<h4 className="text-center">Type: {type === "" ? "Unknown" : type}</h4>
 			</div>
 
 			<div className="row">
 				<div className="col-lg-3 col-12 mb-5">
-					<h2 className="text-center fw-bold fs-4 mb-4">Pick Location</h2>
+					<h2 className="text-center fs-5 mb-4">Pick Location</h2>
 					<InputGroup total={126} name="Location" setId={setId}/>
 				</div>
-				<div className="col-8">
-					<div className="row py-2">
+				<div className="col-lg-8 col-12">
+					<div className="row">
 						<Cards results={results} page="/location/"/>
 					</div>
 				</div>
 			</div>
 		</div>
 
-	)
+	);
 };
 
 export default Location;

@@ -6,11 +6,11 @@ const Navbar = () => {
 
 	return (
 
-		<nav className="navbar navbar-expand-lg bg-body-tertiary mb-5">
+		<nav className="navbar navbar-expand-lg navbar-light bg-light mb-5">
 		  <div className="container">
-		    <Link className="navbar-brand text-primary fw-bold fs-3" to="/">Rick & Morty App</Link>
+		    <Link className="navbar-brand text-primary fw-bold fs-4" to="/">Rick & Morty App</Link>
 		    <button 
-		    	className="navbar-toggler" 
+		    	className="navbar-toggler border-0" 
 		    	type="button" 
 		    	data-bs-toggle="collapse" 
 		    	data-bs-target="#navbarNavAltMarkup" 
@@ -18,12 +18,12 @@ const Navbar = () => {
 		    	aria-expanded="false" 
 		    	aria-label="Toggle navigation">
 
-		    	<i className="fa-solid fa-bars open fw-bold text-dark"></i>
-		    	<i className="fa-solid fa-xmark close fw-bold text-dark"></i>
+		    	<i className="fa-solid fa-bars open text-dark"></i>
+		    	<i className="fa-solid fa-xmark close text-dark"></i>
 		      
 		    </button>
 		    <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-		      <div className="navbar-nav gap-4 fs-5">
+		      <div className="navbar-nav gap-4 fs-6">
 		        <NavLink className="nav-link" activeclassname="active" to="/">Characters</NavLink>
 		        <NavLink className="nav-link" to="/episodes">Episodes</NavLink>
 		        <NavLink className="nav-link" to="/location">Location</NavLink>

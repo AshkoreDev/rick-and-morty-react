@@ -1,7 +1,7 @@
 import React from 'react';
 import './Filter.css';
 
-const FilterBtn = ({name, index, item, task, setPageNumber}) => {
+const FilterBtn = ({ name, index, item, task, setPageNumber }) => {
 
 	return (
 
@@ -24,7 +24,7 @@ const FilterBtn = ({name, index, item, task, setPageNumber}) => {
 			</div>
 	  </div>
 	  
-	)
+	);
 };
 
 export default FilterBtn;
