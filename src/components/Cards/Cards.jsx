@@ -17,12 +17,12 @@ const Cards = ({ results, page }) => {
 			    
 				<Link key={id} className="card col-lg-4 col-md-6 col-12 mb-4 text-dark" to={`${page}${id}`}>
 	      	<div className="card__content d-flex flex-column justify-content-between position-relative">
-	      		<img src={image} alt={name} className="image img-fluid"/>
+	      		<img src={image} alt={name} className="image img-fluid" width="296" height="296" loading="lazy"/>
 
 		      	<div className="card__info p-2">
-		      		<h2 className="fs-5 fw-bold mb-2">{name}</h2>
-		      		<h5 className="fs-6">Last location:</h5>
-		      		<h3 className="fs-6">{location.name}</h3>
+		      		<h5 className="fw-bold mb-2">{name}</h5>
+		      		<h6>Last location:</h6>
+		      		<h6>{location.name}</h6>
 		      	</div>
 		      	{(() => {
 						if (status === 'Alive') {
@@ -30,7 +30,7 @@ const Cards = ({ results, page }) => {
 						} else if(status === 'Dead') {
 							return (<span className="badge bg-danger position-absolute">{status}</span>);
 						} else {
-							return (<span className="badge bg-warning position-absolute">{status}</span>);
+							return (<span className="badge bg-secondary position-absolute">{status}</span>);
 						}
 			    })()}
 	      	</div>

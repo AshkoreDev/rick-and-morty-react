@@ -25,8 +25,8 @@ const CardDetails = () => {
 
 	  <section className="container d-flex justify-content-center mb-5">
 	  	<article className="d-flex flex-column gap-2">
-	  		<h2 className="text-center fs-1">{name}</h2>
-	  		<img src={image} alt={`${name} photo`} className="img-fluid"/>
+	  		<h2 className="text-center">{name}</h2>
+	  		<img src={image} alt={`${name} photo`} className="img-fluid" width="380" height="380"/>
 	  		{(() => {
 					if (status === 'Alive') {
 						return (<span className="bg-success text-white text-center fw-bold fs-5">{status}</span>);
