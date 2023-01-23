@@ -42,7 +42,7 @@ const Episodes = () => {
 				<h3 className="text-center">Aire Date {air_date === "" ? "Unknown" : `on ${air_date}`}</h3>
 			</div>
 
-			<div className="row">
+			<div className="row justify-content-around">
 				<div className="col-lg-3 col-12 mb-5">
 					<h2 className="text-center fs-5 mb-4">Pick Episodes</h2>
 					<InputGroup total={51} name="Episode" setId={setId}/>

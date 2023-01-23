@@ -66,7 +66,7 @@ const Home = () => {
       <Search setSearch={setSearch} setPageNumber={setPageNumber}/>
 
       <div className="container">
-        <div className="row">
+        <div className="row justify-content-around">
           <Filter 
             setStatus={setStatus} 
             setGender={setGender} 
